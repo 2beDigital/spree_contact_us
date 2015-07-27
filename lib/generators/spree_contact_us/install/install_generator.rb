@@ -15,7 +15,6 @@ module SpreeContactUs
 
       def copy_initializer_file
         template 'spree_contact_us.rb', "#{file_name}/config/initializers/spree_contact_us.rb"
-        template 'spree_contact_us/config/initializers/recaptcha.rb', "#{file_name}/config/initializers/recaptcha.rb"
       end
     end
   end
