@@ -13,32 +13,67 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
 
 <h1><%= Spree.t(:contact_us_title) %></h1>
-<%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
-  <% if SpreeContactUs.require_name %>
-    <p>
-      <%= f.label :name %>
-      <span class="required">*</span><br/>
-      <%= f.text_field :name, class: 'required form-control' %>
-    </p>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="map-outer" class="col-md-12">
+      <div id="address" class="col-md-4">
+        <h2><%= t :CUGroup%></h2>
+        <address>
+          <strong><%= raw t('footerCQ.Address') %></strong><br>
+          <%= t 'footerCQ.ZipCodeAndArea' %><br>
+          <%= t 'footerCQ.CityAndCountry' %><br>
+          <%= t'footerCQ.TelfNumber'%><br>
+          <%= t 'footerCQ.mailto'%>
+        </address>
+      </div>
+      <div id="map-container" class="col-md-8">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3044.570746494746!2d-3.749150599999999!3d40.2630701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418aa406d23043%3A0xa00a761c8266ee50!2sCalle+Bembibre%2C+28%2C+28947+Fuenlabrada%2C+Madrid!5e0!3m2!1ses!2ses!4v1422984818951" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+      </div>
+    </div><!-- /map-outer -->
+  </div>
+</div> <!-- /row -->
+
+<div class="row">
+
+  <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '', :class => 'form-horizontal'} do |f| %>
+      <div class="col-md-12" id="name_email">
+        <div class="col-md-6 input-group pull-left" id="name">
+          <span class="input-group-addon">
+            <i class="fa fa-user"></i>
+          </span>
+          <%= f.text_field :name, class: 'form-control required',:id =>  "name", :placeholder => "Name"  %>
+        </div>
+        <div class="col-md-6  input-group pull-right" id="email">
+          <span class="input-group-addon">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <%= f.email_field :email, class: 'form-control required', :class => "form-control", :id => "email", :placeholder => "Email Address" %>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12" id="comments">
+        <div class="col-md-12 input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-pencil"></i>
+              </span>
+          <%= f.text_area :message, class: 'form-control required', :rows => "6", :id => "comments", :placeholder => "Your question or comment here" %>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <%= recaptcha_tags %>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <div class="col-md-12 input-group">
+          <label class="checkbox required micro" id="label_contact_term_and_cond" for="contact_term_and_cond" required>
+            <input type="checkbox" id="contact_term_and_cond" name="contact[term_and_cond]" required="required" value="1" />
+            <%= Spree.t(:contact_term_and_cond) %>
+          </label>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :class => 'btn btn-success', :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
+      </div>
   <% end %>
-  <p>
-    <%= f.label :email %>
-    <span class="required">*</span><br/>
-    <%= f.email_field :email, class: 'required form-control email' %>
-  </p>
-  <% if SpreeContactUs.require_subject %>
-    <p>
-      <%= f.label :subject %>
-      <span class="required">*</span><br/>
-      <%= f.text_field :subject, class: 'required form-control' %>
-    </p>
-  <% end %>
-  <p>
-    <%= f.label :message %>
-    <span class="required">*</span><br/>
-    <%= f.text_area :message, class: 'required form-control' %>
-  </p>
-  <p>
-    <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
-  </p>
-<% end %>
+</div>
+

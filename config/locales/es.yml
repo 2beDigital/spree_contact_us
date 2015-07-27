@@ -15,6 +15,7 @@ es:
     sent_by_name: "Enviado por %{name} desde %{email}"
     subject: "Mensaje de contacto desde %{email}"
     submit: "Enviar"
+    contact_term_and_cond: He leído y acepto los términos y condiciones y la política de privacidad
 
     contact_us:
       notices:
