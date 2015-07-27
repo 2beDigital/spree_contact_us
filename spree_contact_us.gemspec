@@ -37,5 +37,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "i18n"
   s.add_development_dependency "minitest", "~> 5.0"
   s.add_development_dependency "pry-byebug"
-  s.add_development_dependency "recaptcha", :require => "recaptcha/rails"
+  s.add_development_dependency "recaptcha"
 end
