@@ -28,8 +28,8 @@ To install from edge:
 
 Edit into your application.yml your secret and public key for recaptcha:
 
-RECAPTCHA_PUBLIC_KEY: 6LdPRQoTAAAAA_xxxxxxxxxxxxxxxxxxxxxxxxxx
-RECAPTCHA_PRIVATE_KEY: 6LdPRQoTAAAAA_yyyyyyyyyyyyyyyyyyyyyyyyyy
+    RECAPTCHA_PUBLIC_KEY: 6LdPRQoTAAAAA_xxxxxxxxxxxxxxxxxxxxxxxxxx
+    RECAPTCHA_PRIVATE_KEY: 6LdPRQoTAAAAA_yyyyyyyyyyyyyyyyyyyyyyyyyy
 
 From `Rails.root` run:
 
