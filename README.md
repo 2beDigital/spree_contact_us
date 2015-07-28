@@ -23,11 +23,13 @@ In your `Gemfile`, add the following dependencies:
 
 To install from edge:
 
-    gem 'spree_contact_us', :git => 'https://github.com/spree-contrib/spree_contact_us'
+    gem 'spree_contact_us', :git => 'https://github.com/NoelDiazMesa/spree_contact_us.git', :branch => 'master'
+    gem "recaptcha", :require => "recaptcha/rails"
 
-Or install from latest stable version:
+Edit into your application.yml your secret and public key for recaptcha:
 
-    gem 'spree_contact_us', '~> 1.1.0'
+RECAPTCHA_PUBLIC_KEY: 6LdPRQoTAAAAA_xxxxxxxxxxxxxxxxxxxxxxxxxx
+RECAPTCHA_PRIVATE_KEY: 6LdPRQoTAAAAA_yyyyyyyyyyyyyyyyyyyyyyyyyy
 
 From `Rails.root` run:
 
