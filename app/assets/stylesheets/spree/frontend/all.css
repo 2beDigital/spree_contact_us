@@ -7,7 +7,7 @@
  ** require spree/frontend
  ** remove vendor/assets/stylesheets/spree/frontend
 
- * require_self
- * require_tree .
- *= require spree/frontend/spree_contact_us.css
+ *= require_self
+ *= require_tree .
+ *= require spree/frontend/spree_contact_us
 */
