@@ -1,0 +1,55 @@
+//CONTACT_US
+
+@import "font-awesome";
+// I gather this file is a starting point for the project.
+@import "bootstrap";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+
+#map-container{
+  position: relative;
+  background-color: rgb(229, 227, 223);
+  overflow: hidden;
+  height: 400px;
+
+}
+
+#map-outer {
+  padding: 20px;
+  border: 1px solid #CCC;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.col-md-12{
+  margin-bottom: 10px;
+}
+
+div#name.input-group,
+div#email.input-group{
+  width: 49%;
+}
+
+div#comments{
+  margin-top: 10px;
+}
+
+label#label_contact_term_and_cond{
+  margin-left: 20px;
+}
+
+@media (max-width: 750px ) {
+  div#name.input-group,
+  div#email.input-group{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #name_email{
+    margin-bottom: 5px;
+  }
+}

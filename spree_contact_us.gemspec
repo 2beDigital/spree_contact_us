@@ -37,4 +37,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "i18n"
   s.add_development_dependency "minitest", "~> 5.0"
   s.add_development_dependency "pry-byebug"
+  s.add_development_dependency 'bootstrap-sass', '~> 3.1.1.1'
+  s.add_development_dependency "font-awesome-rails"
+
 end
