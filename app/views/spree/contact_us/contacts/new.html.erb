@@ -60,10 +60,10 @@
           <%= f.text_area :message, class: 'form-control required', :rows => "6", :id => "comments", :placeholder => "Your question or comment here" %>
         </div>
       </div>
-      <div class="col-md-12 col-xs-12">
+      <div class="col-md-12 col-xs-12" id="recaptcha">
         <%= recaptcha_tags %>
       </div>
-      <div class="col-md-12 col-xs-12">
+      <div class="col-md-12 col-xs-12" id="condition">
         <div class="col-md-12 input-group">
           <label class="checkbox required micro" id="label_contact_term_and_cond" for="contact_term_and_cond" required>
             <input type="checkbox" id="contact_term_and_cond" name="contact[term_and_cond]" required="required" value="1" />
@@ -71,7 +71,7 @@
           </label>
         </div>
       </div>
-      <div class="col-md-12 col-xs-12">
+      <div class="col-md-12 col-xs-12" id="button_submit">
         <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :class => 'btn btn-success', :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
       </div>
   <% end %>

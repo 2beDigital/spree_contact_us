@@ -26,8 +26,12 @@
   overflow: hidden;
 }
 
-.col-md-12{
-  margin-bottom: 10px;
+#comments,
+#name_email,
+#recaptcha,
+#condition,
+#button_submit{
+  margin-bottom: 10px !important;
 }
 
 div#name.input-group,
