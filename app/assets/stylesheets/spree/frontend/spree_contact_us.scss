@@ -32,6 +32,13 @@
 #condition,
 #button_submit{
   margin-bottom: 10px !important;
+  label.error{
+    min-width: 100%;
+    border: 1px solid red;
+    padding: 4px;
+    margin-bottom: 0px;
+    color: red;
+  }
 }
 
 div#name.input-group,
